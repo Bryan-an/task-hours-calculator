@@ -1,0 +1,25 @@
+language: 'en-US'
+
+reviews:
+  profile: 'assertive' # or "chill"
+  high_level_summary: true
+  commit_status: true
+  request_changes_workflow: true
+  auto_review:
+    enabled: true
+    auto_incremental_review: true
+    drafts: false
+    ignore_title_keywords: ['WIP', 'DRAFT']
+  path_filters:
+    - '!dist/'
+    - '!build/'
+    - 'src/'
+
+  tools:
+    eslint: { enabled: true }
+    biome: { enabled: true }
+    ruff: { enabled: true }
+    shellcheck: { enabled: true }
+    hadolint: { enabled: true }
+    golangci-lint: { enabled: true }
+    markdownlint: { enabled: true }

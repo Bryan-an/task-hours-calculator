@@ -1,25 +1,32 @@
-language: 'en-US'
+language: en-US
 
 reviews:
-  profile: 'assertive' # or "chill"
+  profile: assertive
   high_level_summary: true
-  commit_status: true
-  request_changes_workflow: true
   auto_review:
     enabled: true
-    auto_incremental_review: true
     drafts: false
-    ignore_title_keywords: ['WIP', 'DRAFT']
+    ignore_title_keywords:
+      - WIP
+      - DRAFT
+  request_changes_workflow: true
   path_filters:
-    - '!dist/'
-    - '!build/'
-    - 'src/'
-
+    - "!dist/"
+    - "!build/"
+    - "!target/"
+    - "!node_modules/"
+    - "src/"
+    - "src-tauri/"
   tools:
-    eslint: { enabled: true }
-    biome: { enabled: true }
-    ruff: { enabled: true }
-    shellcheck: { enabled: true }
-    hadolint: { enabled: true }
-    golangci-lint: { enabled: true }
-    markdownlint: { enabled: true }
+    eslint:
+      enabled: true
+    biome:
+      enabled: true
+    ruff:
+      enabled: true
+    shellcheck:
+      enabled: true
+    hadolint:
+      enabled: true
+    markdownlint:
+      enabled: true

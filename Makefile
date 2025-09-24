@@ -1,17 +1,21 @@
 # Tauri Development Makefile
 # Common development tasks for the project
 
-.PHONY: help dev build clean lint format check test tauri-dev tauri-build setup all
+.PHONY: help deps dev build clean lint format check test tauri-dev tauri-build setup all
 
 # Default target
 all: help
 
 help:
-	@echo "Available commands: dev, build, clean, lint, format, check, test, tauri-dev, tauri-build, setup"
+	@echo "Available commands: deps, dev, build, clean, lint, format, check, test, tauri-dev, tauri-build, setup"
 	@echo "Run 'make <command>' for more details (e.g., make dev, make build, make clean)"
 
+# Dependencies management
+deps:
+	@[ ! -d "node_modules" ] && pnpm install || echo "Dependencies already installed"
+
 # Frontend development
-dev:
+dev: deps
 	pnpm dev
 
 # Production build

@@ -33,6 +33,7 @@ Follow the instructions below for your operating system to set up the required d
    - For older versions, download from [Microsoft Edge WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
 
 3. **Rust Setup**:
+
    ```bash
    # Install Rust with MSVC toolchain
    rustup default stable-msvc
@@ -53,6 +54,7 @@ Follow the instructions below for your operating system to set up the required d
    ```
 
 3. **Rust Setup**:
+
    ```bash
    # Install Rust
    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -101,6 +103,7 @@ Corepack is included by default with Node.js 16.17+ and enables reliable package
    ```
 
 3. **Verify installation**:
+
    ```bash
    pnpm --version
    ```

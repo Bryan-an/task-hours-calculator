@@ -31,3 +31,16 @@ trim_trailing_whitespace = false
 # Package files
 [package.json]
 indent_size = 2
+
+# Makefiles (require tabs for proper recipe syntax)
+[Makefile]
+indent_style = tab
+trim_trailing_whitespace = false
+
+[*.mk]
+indent_style = tab
+trim_trailing_whitespace = false
+
+[**/Makefile]
+indent_style = tab
+trim_trailing_whitespace = false

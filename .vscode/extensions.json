@@ -3,6 +3,7 @@
     "rust-lang.rust-analyzer",
     "tauri-apps.tauri-vscode",
     "ms-vscode.vscode-typescript-next",
+    "ms-vscode.vscode-typescript",
     "bradlc.vscode-tailwindcss",
     "esbenp.prettier-vscode",
     "ms-vscode.vscode-json",
@@ -10,6 +11,5 @@
     "ms-vscode-remote.remote-containers",
     "formulahendry.auto-rename-tag",
     "christian-kohler.path-intellisense"
-  ],
-  "unwantedRecommendations": ["ms-vscode.vscode-typescript"]
+  ]
 }

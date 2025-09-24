@@ -47,6 +47,7 @@ make dev
 
 ```bash
 # Frontend only
+pnpm install --frozen-lockfile
 pnpm dev
 
 # Rust only (check compilation)
@@ -61,7 +62,7 @@ cargo tauri build
 
 ## 📁 Project Structure
 
-```
+```text
 ├── src/                    # React frontend
 ├── src-tauri/             # Rust backend
 │   ├── src/               # Rust source code

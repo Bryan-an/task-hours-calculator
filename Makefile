@@ -1,9 +1,11 @@
 # Tauri Development Makefile
 # Common development tasks for the project
 
-.PHONY: help dev build clean lint format check test tauri-dev tauri-build
+.PHONY: help dev build clean lint format check test tauri-dev tauri-build setup all
 
 # Default target
+all: help
+
 help:
 	@echo "Available commands:"
 	@echo "  make dev          - Start development server"

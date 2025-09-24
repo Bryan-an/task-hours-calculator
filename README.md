@@ -122,7 +122,7 @@ Corepack is included by default with Node.js 16.17+ and enables reliable package
 - **VS Code**: Recommended editor with extensions:
   - `rust-lang.rust-analyzer`
   - `tauri-apps.tauri-vscode`
-  - `ms-vscode.vscode-typescript-next`
+  - `ms-vscode.vscode-typescript-next` (optional; only if you need nightly TypeScript features)
   - `bradlc.vscode-tailwindcss`
   - `esbenp.prettier-vscode`
 
@@ -139,6 +139,9 @@ pnpm install --frozen-lockfile
 
 # Install Tauri CLI
 cargo install tauri-cli --locked
+
+# Verify environment
+cargo tauri info
 
 # Start development server
 make dev
@@ -282,7 +285,7 @@ pnpm dev
 ## 🔒 Security Considerations
 
 - Review Tauri security documentation
-- Use appropriate CSP settings in `tauri.conf.json`
+- Use appropriate CSP settings in `tauri.conf.json` (see Tauri's CSP docs: https://tauri.app/security)
 - Validate all user inputs in commands
 - Keep dependencies updated
 

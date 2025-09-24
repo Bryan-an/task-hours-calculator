@@ -38,6 +38,7 @@ Follow the instructions below for your operating system to set up the required d
 
    ```bash
    # Install Rust with MSVC toolchain
+   rustup toolchain install stable-msvc
    rustup default stable-msvc
    ```
 
@@ -69,6 +70,8 @@ Follow the instructions below for your operating system to set up the required d
    ```bash
    sudo apt update
    sudo apt install libwebkit2gtk-4.1-dev \
+     libgtk-3-dev \
+     libsoup-3.0-dev \
      build-essential \
      curl \
      wget \
@@ -98,13 +101,7 @@ Corepack is included by default with Node.js 16.17+ and enables reliable package
    corepack enable
    ```
 
-2. **Activate pnpm (uses version from package.json)**:
-
-   ```bash
-   corepack enable
-   ```
-
-3. **Verify installation**:
+2. **Verify installation**:
 
    ```bash
    pnpm --version
@@ -247,7 +244,7 @@ pnpm build
 rustup update
 
 # Add components if missing
-rustup component add clippy rustfmt rust-analyzer
+rustup component add clippy rustfmt rust-src
 ```
 
 **Tauri not starting:**

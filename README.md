@@ -30,7 +30,7 @@ Follow the instructions below for your operating system to set up the required d
 2. **WebView2 Runtime** (Required for Tauri applications):
 
    - **Verify Installation**: Even on Windows 10 (version 1803+) and Windows 11, WebView2 may not be present on all systems
-   - **Check for WebView2**: Open PowerShell as Administrator and run: `Get-AppxPackage -Name "Microsoft.Edge"` to verify if WebView2 components are installed
+   - **Check for WebView2**: In PowerShell (Admin), run: `winget list "WebView2 Runtime"` or verify via Apps & Features for "Microsoft Edge WebView2 Runtime"
    - **Download & Install**: If missing, download the WebView2 Runtime from [Microsoft Edge WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
    - **Quick Install**: Run this PowerShell command as Administrator: `winget install Microsoft.EdgeWebView2Runtime`
 
@@ -98,10 +98,10 @@ Corepack is included by default with Node.js 16.17+ and enables reliable package
    corepack enable
    ```
 
-2. **Install and activate pnpm**:
+2. **Activate pnpm (uses version from package.json)**:
 
    ```bash
-   corepack prepare pnpm@9.12.0 --activate
+   corepack enable
    ```
 
 3. **Verify installation**:
@@ -267,10 +267,13 @@ cargo tauri dev
 **Frontend not loading:**
 
 ```bash
-# Clear node modules and reinstall
-rm -rf node_modules pnpm-lock.yaml
-pnpm install
+# Clear node_modules and reinstall with the lockfile
+rm -rf node_modules
+pnpm install --frozen-lockfile
 pnpm dev
+
+# If issues persist, regenerate the lockfile (last resort)
+# rm -rf node_modules pnpm-lock.yaml && pnpm install && pnpm dev
 ```
 
 ### Performance Tips

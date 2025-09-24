@@ -7,17 +7,8 @@
 all: help
 
 help:
-	@echo "Available commands:"
-	@echo "  make dev          - Start development server"
-	@echo "  make build        - Build for production"
-	@echo "  make clean        - Clean build artifacts"
-	@echo "  make lint         - Run linter on Rust code"
-	@echo "  make format       - Format code with rustfmt"
-	@echo "  make check        - Check code without building"
-	@echo "  make test         - Run tests"
-	@echo "  make tauri-dev    - Run Tauri development server"
-	@echo "  make tauri-build  - Build Tauri application"
-	@echo "  make setup        - Initial setup of development tools"
+	@echo "Available commands: dev, build, clean, lint, format, check, test, tauri-dev, tauri-build, setup"
+	@echo "Run 'make <command>' for more details (e.g., make dev, make build, make clean)"
 
 # Frontend development
 dev:

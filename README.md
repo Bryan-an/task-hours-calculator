@@ -39,6 +39,12 @@ A Tauri-based application for calculating task hours, built with React, TypeScri
 # Install development tools
 make setup
 
+# Install frontend dependencies
+pnpm install --frozen-lockfile
+
+# Install Tauri CLI
+cargo install tauri-cli --locked
+
 # Start development server
 make dev
 ```

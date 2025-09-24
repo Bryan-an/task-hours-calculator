@@ -12,7 +12,7 @@ help:
 
 # Dependencies management
 deps:
-	@[ ! -d "node_modules" ] && pnpm install || echo "Dependencies already installed"
+	pnpm install --frozen-lockfile
 
 # Frontend development
 dev: deps

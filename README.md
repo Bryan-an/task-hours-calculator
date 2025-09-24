@@ -27,10 +27,12 @@ Follow the instructions below for your operating system to set up the required d
    - Download and install [Build Tools for Visual Studio 2022](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
    - During installation, select the "Desktop development with C++" workload
 
-2. **WebView2 Runtime**:
+2. **WebView2 Runtime** (Required for Tauri applications):
 
-   - Windows 10 (version 1803+) and Windows 11 include WebView2 by default
-   - For older versions, download from [Microsoft Edge WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
+   - **Verify Installation**: Even on Windows 10 (version 1803+) and Windows 11, WebView2 may not be present on all systems
+   - **Check for WebView2**: Open PowerShell as Administrator and run: `Get-AppxPackage -Name "Microsoft.Edge"` to verify if WebView2 components are installed
+   - **Download & Install**: If missing, download the WebView2 Runtime from [Microsoft Edge WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
+   - **Quick Install**: Run this PowerShell command as Administrator: `winget install Microsoft.EdgeWebView2Runtime`
 
 3. **Rust Setup**:
 
@@ -99,7 +101,7 @@ Corepack is included by default with Node.js 16.17+ and enables reliable package
 2. **Install and activate pnpm**:
 
    ```bash
-   corepack prepare pnpm@latest --activate
+   corepack prepare pnpm@9.12.0 --activate
    ```
 
 3. **Verify installation**:
@@ -249,6 +251,12 @@ rustup component add clippy rustfmt rust-analyzer
 ```
 
 **Tauri not starting:**
+
+If "cargo tauri" is not found, install the CLI:
+
+```bash
+cargo install tauri-cli --locked
+```
 
 ```bash
 # Clean and rebuild

@@ -69,7 +69,7 @@ Follow the instructions below for your operating system to set up the required d
 
    ```bash
    sudo apt update
-   sudo apt install libwebkit2gtk-4.1-dev \
+   sudo apt install libwebkit2gtk-4.0-dev \
      libgtk-3-dev \
      libsoup-3.0-dev \
      build-essential \

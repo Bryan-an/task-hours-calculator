@@ -21,7 +21,7 @@ build:
 # Clean build artifacts
 clean:
 	rm -rf dist/
-	rm -rf src-tauri/target/
+	cargo clean --manifest-path=src-tauri/Cargo.toml
 
 # Rust development tools
 lint:

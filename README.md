@@ -10,9 +10,102 @@ A Tauri-based application for calculating task hours, built with React, TypeScri
 
 ### Prerequisites
 
+#### System Requirements
+
 - **Rust**: Latest stable version (managed by rustup)
 - **Node.js**: Version 18+ (for frontend development)
-- **pnpm**: Package manager for Node.js
+- **pnpm**: Package manager for Node.js (via Corepack)
+
+#### Platform-Specific Setup
+
+Follow the instructions below for your operating system to set up the required dependencies for Tauri development.
+
+##### Windows
+
+1. **Microsoft C++ Build Tools**:
+
+   - Download and install [Build Tools for Visual Studio 2022](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
+   - During installation, select the "Desktop development with C++" workload
+
+2. **WebView2 Runtime**:
+
+   - Windows 10 (version 1803+) and Windows 11 include WebView2 by default
+   - For older versions, download from [Microsoft Edge WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
+
+3. **Rust Setup**:
+   ```bash
+   # Install Rust with MSVC toolchain
+   rustup default stable-msvc
+   ```
+
+##### macOS
+
+1. **Xcode Command Line Tools**:
+
+   ```bash
+   xcode-select --install
+   ```
+
+2. **Homebrew** (recommended for additional dependencies):
+
+   ```bash
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
+
+3. **Rust Setup**:
+   ```bash
+   # Install Rust
+   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+   ```
+
+##### Linux
+
+1. **System Dependencies** (Ubuntu/Debian):
+
+   ```bash
+   sudo apt update
+   sudo apt install libwebkit2gtk-4.1-dev \
+     build-essential \
+     curl \
+     wget \
+     file \
+     libxdo-dev \
+     libssl-dev \
+     libayatana-appindicator3-dev \
+     librsvg2-dev
+   ```
+
+2. **Rust Setup**:
+
+   ```bash
+   # Install Rust
+   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+   ```
+
+   > **Note**: For other Linux distributions, see the [Tauri Prerequisites](https://tauri.app/start/prerequisites/) documentation.
+
+#### Package Manager Setup (pnpm via Corepack)
+
+Corepack is included by default with Node.js 16.17+ and enables reliable package manager versions.
+
+1. **Enable Corepack**:
+
+   ```bash
+   corepack enable
+   ```
+
+2. **Install and activate pnpm**:
+
+   ```bash
+   corepack prepare pnpm@latest --activate
+   ```
+
+3. **Verify installation**:
+   ```bash
+   pnpm --version
+   ```
+
+> **Tip**: Corepack ensures everyone on your team uses the same package manager version. See [Corepack documentation](https://nodejs.org/api/corepack.html) for more details.
 
 ### Recommended Tools
 

@@ -13,7 +13,7 @@ A Tauri-based application for calculating task hours, built with React, TypeScri
 #### System Requirements
 
 - **Rust**: Latest stable version (managed by rustup)
-- **Node.js**: Version 18+ (for frontend development)
+- **Node.js**: Active LTS (v20+) (for frontend development)
 - **pnpm**: Package manager for Node.js (via Corepack)
 
 #### Platform-Specific Setup
@@ -30,9 +30,9 @@ Follow the instructions below for your operating system to set up the required d
 2. **WebView2 Runtime** (Required for Tauri applications):
 
    - **Verify Installation**: Even on Windows 10 (version 1803+) and Windows 11, WebView2 may not be present on all systems
-   - **Check for WebView2**: In PowerShell (Admin), run: `winget list "WebView2 Runtime"` or verify via Apps & Features for "Microsoft Edge WebView2 Runtime"
+   - **Check for WebView2**: In PowerShell (Admin), run: `winget list --id Microsoft.EdgeWebView2Runtime -e` or verify via Apps & Features for "Microsoft Edge WebView2 Runtime"
    - **Download & Install**: If missing, download the WebView2 Runtime from [Microsoft Edge WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
-   - **Quick Install**: Run this PowerShell command as Administrator: `winget install Microsoft.EdgeWebView2Runtime`
+   - **Quick Install**: Run this PowerShell command as Administrator: `winget install --id Microsoft.EdgeWebView2Runtime -e`
 
 3. **Rust Setup**:
 
@@ -285,7 +285,7 @@ pnpm dev
 ## 🔒 Security Considerations
 
 - Review Tauri security documentation
-- Use appropriate CSP settings in `tauri.conf.json` (see Tauri's CSP docs: https://tauri.app/security)
+- Use appropriate CSP settings in `tauri.conf.json` (see [Tauri's CSP docs](https://tauri.app/security))
 - Validate all user inputs in commands
 - Keep dependencies updated
 

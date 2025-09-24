@@ -10,13 +10,6 @@ reviews:
       - WIP
       - DRAFT
   request_changes_workflow: true
-  path_filters:
-    - "!dist/**"
-    - "!build/**"
-    - "!target/**"
-    - "!node_modules/**"
-    - "src/**"
-    - "src-tauri/**"
   tools:
     eslint:
       enabled: true

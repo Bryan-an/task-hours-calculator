@@ -1,0 +1,8 @@
+# Rust toolchain configuration
+# This file specifies the Rust version and components for the project
+
+[toolchain]
+channel = "stable"
+components = ["rustfmt", "clippy", "rust-analyzer"]
+targets = ["wasm32-unknown-unknown"]
+profile = "default"

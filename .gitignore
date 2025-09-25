@@ -27,3 +27,9 @@ dist-ssr
 .claude
 CLAUDE.md
 WARP.md
+
+# Tauri
+# https://github.com/tauri-apps/tauri/blob/dev/.gitignore
+src-tauri/target/
+tauri.config.backup.json
+tauri.conf.json.backup
